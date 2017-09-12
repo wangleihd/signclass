@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const url = 'mongodb://remn:remn@ds163301.mlab.com:63301/remn';
+const url = 'mongodb://sixi:sixi@ds129344.mlab.com:29344/sixi';
 mongoose.Promise = global.Promise;
 mongoose.connect(url, {useMongoClient: true});
 
@@ -8,13 +8,13 @@ let db = mongoose.connection;
 db.once('open', function(){
   console.log('connect db ok!');
 })
-
 let Schema = mongoose.Schema;
 
 let userShema = Schema({
-  name: { type: String },
-  password: { type: String }
+  user_id: { type: String },//用户注册账号
+  name: { type: String },//用户名
+  stuNum: {type: Number, default: 201709000},//学号
+  password: { type: String }//密码
 });
-
 
 module.exports.user = mongoose.model('user', userShema);

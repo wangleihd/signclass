@@ -11,27 +11,41 @@
   <body>
     <div class="container">
     <div class="row">
-        <div class="col-md-offset-5 col-md-3">
-            <form class="" action="/register" method="post">
-            <div class="form-login">
-            <h4>Register</h4>
-            <input type="text" id="userName" class="form-control input-sm chat-input" placeholder="User Name" name="username" />
-            <h4></h4>
-            <input type="password" id="userPassword" class="form-control input-sm chat-input" placeholder="Input Password" name="password" />
-            <br>
-            <input type="password" id="userPassword" class="form-control input-sm chat-input" placeholder="Input Password" name="repassword" />
-            </br>
-            <div class="wrapper">
-            <span class="group-btn">
-                <button type="submit" class="btn btn-success btn-md">register <i class="fa fa-sign-in"></i></button>
-                <a href="/login"  class="btn btn-default btn-md">login </a>
-            </span>
+            <div class="col-md-offset-5 col-md-3">
+                <form class="" action="/register" method="post">
+                <div class="form-login">
+                <h4>Register</h4>
+                <input type="text" id="userName" class="form-control input-sm chat-input" placeholder="account" name="user_id" required />
+                <h4></h4>
+                <input type="text" id="userName" class="form-control input-sm chat-input" placeholder="User" name="username" required />
+                <h4></h4>
+                <input type="password" id="password" class="form-control input-sm chat-input" placeholder="Input Password" name="password" required />
+                <br>
+                <input type="password" id="repassword" class="form-control input-sm chat-input" placeholder="Input Password" name="repassword" required />
+                </br>
+                <div class="wrapper">
+                <span class="group-btn">
+                    <button type="submit" class="btn btn-success btn-md">register <i class="fa fa-sign-in"></i></button>
+                    <a href="/login"  class="btn btn-default btn-md">login </a>
+                </span>
+                </div>
+                </div>
+                </form>
             </div>
-            </div>
-            </form>
         </div>
     </div>
-</div>
+  <script type="text/javascript">
+
+      var blur = document.getElementById("password");
+      var blur2 = document.getElementById("repassword");
+
+      blur2.onblur = function(){
+        if(blur2.value !== blur.value){
+          alert("两次密码输入不统一!");
+          blur2.value = '';
+        }
+      }
+  </script>
 
   </body>
 </html>
