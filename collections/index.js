@@ -43,6 +43,7 @@ let user_enroll = Schema({
   stuNum_id: {type: Number},//学号(唯一)*
   user_name : {type : String},//学员姓名*
   user_telephone : {type : Number},//电话号码*
+  user_address : {type : String},//地址*
   user_education : {type : String},//学历*
   user_grade : {type : String},//年级*
   user_curriculum : {type : String},//课程*
