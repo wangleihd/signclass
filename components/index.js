@@ -16,19 +16,13 @@ class Index extends React.Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav>
-            <NavItem eventKey={1} href="#one">首页</NavItem>
-            <NavItem eventKey={2} href="#three">在线报名</NavItem>
-            <NavDropdown eventKey={3} title="已报课程" id="basic-nav-dropdown">
-              <MenuItem eventKey={3.1}>Action</MenuItem>
-              <MenuItem eventKey={3.2}>Another action</MenuItem>
-              <MenuItem eventKey={3.3}>Something else here</MenuItem>
-              <MenuItem divider />
-              <MenuItem eventKey={3.3}>Separated link</MenuItem>
-            </NavDropdown>
+            <li><a href="#one">首页</a></li>
+            <li><a href="#two">在线报名</a></li>
+            <li><a href="#three">已报课堂</a></li>
           </Nav>
           <Nav pullRight>
-            <NavItem eventKey={1} href="#">登录</NavItem>
-            <NavItem eventKey={2} href="#">注册</NavItem>
+            <li><a href="https://www.baidu.com/">登录</a></li>
+            <li><a href="https://www.baidu.com/">注册</a></li>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

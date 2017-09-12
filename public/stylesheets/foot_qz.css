@@ -1,6 +1,9 @@
 body{
   margin: 0;
   padding: 0;
+
+
+
 }
   .cle_qz ul{
       list-style:none;
@@ -17,6 +20,7 @@ body{
     }
 
   .foot_qz{
+    float: left;
     width: 100%;
     overflow-x: hidden;
     background: rgb(51,51,51);
