@@ -1,29 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Optional theme -->
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
-  </head>
-  <body>
-    <div>
-            <% if(name) { %>
-              <a href="/logout"  class="btn btn-default btn-md"> <%= name %> > logout <i class="fa fa-sign-out"></i></a>
-            <% } else { %>
-              <a href="/login">login</a> |
-              <a href="/register">register</a>
-            <% } %>
-    </div>
-    <div id="react-root"></div>
-    <script type='text/javascript'>
-    window.ejsname = '<%- name %>';
-    window.ejsinfo = '<%- data %>';
-    var userFromServer = <%- JSON.stringify(data) %>
-    </script>
-    <script type="text/javascript" src="/js/vender.js"></script>
-    <script type="text/javascript" src="/js/index.js"></script>
-    <%- include foot_qz %>
-  </body>
-  </html>
+<%- include head %>
+<div id="root"></div>
+<script type="text/javascript" src="/js/vender.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+<div class="one" id="one"></div>
+<div class="two" id="two"></div>
+<div class="three" id="three"></div>
+<div class="four" id="four"></div>
+<%- include foot_qz %>
