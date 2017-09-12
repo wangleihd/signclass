@@ -9,8 +9,6 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
-  console.log(req.body);
-
   db.user.findOne({
     user_id: req.body.user_id
   }, function(err, data) {
