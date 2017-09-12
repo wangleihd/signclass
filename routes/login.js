@@ -12,7 +12,7 @@ router.post('/', (req, res, next) => {
   console.log(req.body);
 
   db.user.findOne({
-    name: req.body.username
+    user_id: req.body.user_id
   }, function(err, data) {
     if(data){
       bcrypt.compare(req.body.password, data.password, function(err, hash) {
