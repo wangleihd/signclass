@@ -11,10 +11,10 @@ db.once('open', function(){
 let Schema = mongoose.Schema;
 
 let userShema = Schema({
-  user_id: { type: String },
-  stuNum: {type: Number, default: 201709000},
-  name: { type: String },
-  password: { type: String }
+  user_id: { type: String },//用户注册账号
+  name: { type: String },//用户名
+  stuNum: {type: Number, default: 201709000},//学号
+  password: { type: String }//密码
 });
 
 module.exports.user = mongoose.model('user', userShema);
