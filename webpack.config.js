@@ -8,6 +8,8 @@ let configs = {
     vender: ['webpack/hot/dev-server', 'webpack-hot-middleware/client'], // 额外插件打包成vender
     index: './components/index.js',
     register: './components/register.js',
+    login_qz: './components/login_qz.js',
+
   },
   output: {
     path: path.join(ROOT_PATH, 'public'),
@@ -39,7 +41,7 @@ let configs = {
     new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
-          NODE_ENV: JSON.stringify('production'),//production
+          NODE_ENV: JSON.stringify("production"),
       },
     }),
   ]
