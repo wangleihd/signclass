@@ -38,7 +38,16 @@ componentWillMount(){
 
     <FormGroup controlId="formHorizontalPassword">
       <Col componentClass={ControlLabel} sm={3}>
-        密码  
+        密码
+      </Col>
+      <Col sm={9}>
+        <FormControl type="password" placeholder="Password" />
+      </Col>
+    </FormGroup>
+
+    <FormGroup controlId="formHorizontalPassword">
+      <Col componentClass={ControlLabel} sm={3}>
+        确认密码
       </Col>
       <Col sm={9}>
         <FormControl type="password" placeholder="Password" />
