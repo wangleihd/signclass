@@ -1,22 +1,21 @@
 var express = require('express');
 var router = express.Router();
 const db = require('../collections');
-varObjectId = require('mongoose').Types.ObjectId;
+var ObjectId = require('mongoose').Types.ObjectId;
 
 router.route('/p/')
-.get((req,res)=>{
-  db.user.find().exec((err,doc)=>{
+.get((req, res) => {
+  db.user.find().exec((err, doc) => {
     res.json(doc);
   })
 })
-
-.post((req,res)=>{
+.post((req, res) => {
   console.log(req.body);
-  console.log(req.params.id);
 })
 
+
 router.route('/p/:id').get()
-.post(function(req,res){
+.post(function(req, res){
   console.log(req.params.id);
 })
 

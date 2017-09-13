@@ -1,9 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Img from './index/img';
+import Log from './index/log';
+import Hnav from './index/head-nav';
 import { Router, Route} from 'react-router';
+import axios from 'axios';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
 
+
 class Index extends React.Component {
+  // componentWillMount(){
+  //   axios.get('/apis/p/')
+  //   .then(function(response){
+  //     console.log(response);
+  //     console.log(response.data[0].name);
+  //   })
+  //   .catch(function(error){
+  //     console.log(error);
+  //   });
+  // }
 
   render(){
     return (
@@ -12,24 +27,12 @@ class Index extends React.Component {
           <Navbar.Brand>
             <a href="#">思习培训班</a>
           </Navbar.Brand>
+          <Img></Img>
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
-          <Nav>
-            <NavItem eventKey={1} href="#one">首页</NavItem>
-            <NavItem eventKey={2} href="#three">在线报名</NavItem>
-            <NavDropdown eventKey={3} title="已报课程" id="basic-nav-dropdown">
-              <MenuItem eventKey={3.1}>Action</MenuItem>
-              <MenuItem eventKey={3.2}>Another action</MenuItem>
-              <MenuItem eventKey={3.3}>Something else here</MenuItem>
-              <MenuItem divider />
-              <MenuItem eventKey={3.3}>Separated link</MenuItem>
-            </NavDropdown>
-          </Nav>
-          <Nav pullRight>
-            <NavItem eventKey={1} href="/login_qz">登录</NavItem>
-            <NavItem eventKey={2} href="#">注册</NavItem>
-          </Nav>
+          <Hnav></Hnav>
+          <Log></Log>
         </Navbar.Collapse>
       </Navbar>
     );

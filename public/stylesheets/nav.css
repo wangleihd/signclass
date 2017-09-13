@@ -1,36 +1,59 @@
 html,body{
   height: 100%;
 }
+body{
+  position:relative;
+}
+
+.img{
+  display: inline-block;
+}
+.navbar-brand{
+  padding: 15px 10px;
+}
 .navbar{
+
   padding:0;
   margin: 0;
   width:100%;
   position: fixed;
   top:0;
+  z-index: 999;
 }
 .navbar-inverse .navbar-brand{
   color:#ff4141;
 }
-.navbar-inverse .navbar-collapse ul li a{
+.navbar-inverse .navbar-collapse ul a{
   color: white;
   font-size: 15px;
 }
-.navbar-inverse .navbar-collapse ul li a:hover{
+.navbar-inverse .navbar-collapse ul a:hover{
+  display: block;
   color:#797ef9;
+}
+@media all and (max-width:767px){
+  .navbar-inverse .navbar-collapse ul a{
+    display: block!important;
+  }
 }
 
 .one,.two,.three,.four{
   height:100%;
+  width:100%;
 }
 .one{
   background: rgb(247, 152, 74);
+
 }
 .two{
   background: rgb(247, 235, 74);
+
 }
 .three{
   background: rgb(36, 92, 158);
+
 }
 .four{
   background: rgb(100, 35, 194);
+
 }

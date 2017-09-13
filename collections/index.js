@@ -13,9 +13,9 @@ let Schema = mongoose.Schema;
 //用户基本信息表
 let userShema = Schema({
   user_id: { type: String},//用户注册账号(唯一)*
-  name: { type: String },//用户名(唯一)*
+  name: { type: String },//用户名*
   stuNum_id: {type: Number},//学号(唯一)*
-  password: { type: String }//密码(唯一)*
+  password: { type: String }//密码*
 });
 
 module.exports.user = mongoose.model('user',  userShema);
