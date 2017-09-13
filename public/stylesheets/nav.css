@@ -4,7 +4,15 @@ html,body{
 body{
   position:relative;
 }
+
+.img{
+  display: inline-block;
+}
+.navbar-brand{
+  padding: 15px 10px;
+}
 .navbar{
+
   padding:0;
   margin: 0;
   width:100%;
