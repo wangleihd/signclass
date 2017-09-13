@@ -27,7 +27,7 @@ class Index extends React.Component {
             </NavDropdown>
           </Nav>
           <Nav pullRight>
-            <NavItem eventKey={1} href="#">登录</NavItem>
+            <NavItem eventKey={1} href="/login_qz">登录</NavItem>
             <NavItem eventKey={2} href="#">注册</NavItem>
           </Nav>
         </Navbar.Collapse>
