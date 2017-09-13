@@ -32,7 +32,6 @@ body{
 .one,.two,.three,.four{
   height:100%;
   width:100%;
-  position: relative;
 }
 .one{
   background: rgb(247, 152, 74);
